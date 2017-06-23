@@ -1,5 +1,6 @@
-lakdsfjalkj
+def narrow_logic(hash,board)
+  ## for each number
+  ## for each block
+    ## for each row
 
-possible_logic
-
-narrow_Logic
+end

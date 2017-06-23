@@ -4,9 +4,10 @@
 # your solver has tried to solve it.
 # How you represent your board is up to you!
 def solve(board_string)
-  ## Break Board string into ind Game Strings
+  ## Break Board string into ind Game Strings - return array
+        ## call split_games(boardstring)
   ## For Each string in the Board String
-  ## Call solve_logic(ind string)
+    ## Call solve_logic(ind string)
 end
 
 # Returns a boolean indicating whether
