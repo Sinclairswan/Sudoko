@@ -1,7 +1,10 @@
+require_relative 'get_block'
+require_relative 'available_rows_columns'
+
 def narrow_logic(hash,board)
   ## set flag = false
   ## for each number [1..9]
-  ## for each block  ## use hash for blocks
+  ## for each block  [0..8]## use hash for blocks to get coordinates
     ## Check if block has Number
     ## If block doesn't have number
       ## what rows and columns available available_rows_columns(block)
