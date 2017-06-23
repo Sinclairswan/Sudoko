@@ -8,7 +8,13 @@ require_relative 'split_games'
 # How you represent your board is up to you!
 def solve(board_string)
   ## Break Board string into ind Game Strings - return array
-        ## call split_games(boardstring)
+    ## call split_games(boardstring)
+      games = split_games(board_string)
+      solved_games = []
+      games.each do |game|
+        solved_games << solve_logic(game)
+      end
+      return solved_games
   ## For Each string in the Board String
     ## Call solve_logic(ind string)
 end

@@ -12,12 +12,15 @@ require_relative 'sudoku'
 # Remember, the file has newline characters at the end of each line,
 # so we call String#chomp to remove them.
 
-board_string = File.readlines('sudoku_puzzles.txt').first.chomp
+board_string = File.readlines('sudoku_puzzles.txt')
 
 solved_board = solve(board_string)
-if solved?(solved_board)
-  puts "The board was solved!"
-  puts pretty_board(solved_board)
-else
-  puts "The board wasn't solved :("
+solved_board.each do |game|
+  if solved?(solved_board)
+    puts "The board was solved!"
+    puts pretty_board(game)
+  else
+    puts "The board wasn't solved :("
 end
+end
+
