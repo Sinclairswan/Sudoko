@@ -21,6 +21,7 @@ solved_board.each do |game|
     puts pretty_board(game)
   else
     puts "The board wasn't solved :("
+    puts pretty_board(game)
 end
 end
 

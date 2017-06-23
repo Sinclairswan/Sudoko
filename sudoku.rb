@@ -41,7 +41,7 @@ end
 
 
 
-end
+
 
 # Takes in a board in some form and
 # returns a _String_ that's well formatted
