@@ -4,6 +4,9 @@
 # your solver has tried to solve it.
 # How you represent your board is up to you!
 def solve(board_string)
+  ## Break Board string into ind Game Strings
+  ## For Each string in the Board String
+  ## Call solve_logic(ind string)
 end
 
 # Returns a boolean indicating whether
@@ -20,3 +23,7 @@ end
 # form `solve` returns.
 def pretty_board(board)
 end
+
+
+
+######################  WE need search block methods  ---- give_block(coord) return array of block
