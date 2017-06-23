@@ -18,6 +18,23 @@ end
 # The input board will be in whatever
 # form `solve` returns.
 def solved?(board)
+  #takes a nested array searches through each array
+  #returns true if array does NOT include "-"
+
+  board.each do |row|
+      row.each do |item|
+        if item.include?("-")
+          return false
+        else
+          return true
+        end
+     end
+   end
+
+end
+
+
+
 end
 
 # Takes in a board in some form and
@@ -26,8 +43,12 @@ end
 # The input board will be in whatever
 # form `solve` returns.
 def pretty_board(board)
+  board[0].insert(0, "")
+  board.each do |row|
+    row[-1].insert(-1, "\n")
+  end
+  board.join(" ")
 end
-
 
 
 ######################  WE need search block methods  ---- give_block(coord) return array of block
