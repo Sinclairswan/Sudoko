@@ -1,3 +1,6 @@
+require_relative 'solve_logic'
+require_relative 'split_games'
+
 # Takes a board as a string in the format
 # you see in the puzzle file. Returns
 # something representing a board after
