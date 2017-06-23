@@ -1,12 +1,13 @@
 require_relative 'convert_to_nested_array'
 require_relative 'convert_to_string'
-require_relative 'init_possible_hash'
+# require_relative 'init_possible_hash'
 require_relative 'sudoku'
 require_relative 'narrow_Logic'
 
 def solve_logic(board_string)
   # game = convert_to_nested_array(boardstring) convert to a Nested Array
   game = convert_to_nested_array(board_string)
+  puts pretty_board(game)
   # init_possible_hash(nested_array- game)  - create the Possible Hash fill with 1-9   /// exclude all numbers in hash[coord] = nil  ////// Lets move this to initiation
   #
 

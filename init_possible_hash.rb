@@ -28,7 +28,7 @@ def hash_creation(coordinates)
     arr << possibilities
   end
 # p possibilities
-p arr
+ arr
 end
 
 def add_more_hash
