@@ -1,5 +1,5 @@
 require_relative 'sudoku'
-
+require 'pry'
 # The sudoku puzzles that your program will solve can be found
 # in the sudoku_puzzles.txt file.
 #

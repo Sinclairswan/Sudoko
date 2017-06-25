@@ -1,5 +1,7 @@
 require_relative 'solve_logic'
 require_relative 'split_games'
+require_relative 'search_row'
+require_relative 'duplicate_board'
 
 # Takes a board as a string in the format
 # you see in the puzzle file. Returns
@@ -27,16 +29,12 @@ def solved?(board)
   #takes a nested array searches through each array
   #returns true if array does NOT include "-"
 
-  board.each do |row|
-      row.each do |item|
-        if item.include?("-")
-          return false
-        else
-          return true
-        end
-     end
+  board.each_index do |row_index|
+      if search_row(board,row_index).length < 9
+        return false
+      end
    end
-
+   true
 end
 
 
@@ -49,11 +47,12 @@ end
 # The input board will be in whatever
 # form `solve` returns.
 def pretty_board(board)
-  board[0].insert(0, "")
-  board.each do |row|
+  game = duplicate_board(board)
+  game[0].insert(0, "")
+  game.each do |row|
     row[-1].insert(-1, "\n")
   end
-  board.join(" ")
+  game.join(" ")
 end
 
 
