@@ -6,7 +6,8 @@ require_relative 'narrow_logic'
 require_relative 'narrow_logic_reversed'
 require_relative 'row_logic'
 require_relative 'column_logic'
-
+require_relative 'brute_logic'
+require_relative 'duplicate_board'
 
 def solve_logic(board_string)
   # game = convert_to_nested_array(boardstring) convert to a Nested Array
@@ -29,5 +30,9 @@ def solve_logic(board_string)
    ## convert_to_string(nested_array) nested array to string method
    ## return string
   end
+  # binding.pry
+  new_board = duplicate_board(game)
+  brute_logic(new_board,0,0)
+  puts pretty_board(new_board)
   return game
 end
