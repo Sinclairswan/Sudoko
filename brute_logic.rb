@@ -6,7 +6,7 @@ def brute_logic(board,row,column)
   if board[row][column] != '-'
     next_row,next_column = traverse_coord(row,column)
     brute_logic(board,next_row,next_column)
-  end
+  else
   9.times do | number|
   number += 1
   in_block = search_block(board,row,column).include?(number.to_s)
@@ -20,9 +20,8 @@ def brute_logic(board,row,column)
   end
   if number == 9
   #  binding.pry
-    p board
     return false
   end
   end
-
+  end
 end

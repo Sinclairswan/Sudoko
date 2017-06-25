@@ -33,6 +33,6 @@ def solve_logic(board_string)
   # binding.pry
   new_board = duplicate_board(game)
   brute_logic(new_board,0,0)
-  puts pretty_board(new_board)
+  game = new_board
   return game
 end
